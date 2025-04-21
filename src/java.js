@@ -10,6 +10,19 @@ losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do, YYYY");
 losAngelesTimeElement.innerHTML = losAngelesTime.format(
   "HH:mm:ss [<small>]A[</small>]"
 );
+let africaElement = document.querySelector("#africa");
+if (africaElement) {
+let africaDateElement = africaElement.querySelector(".date");
+let africaTimeElement = africaElement.querySelector(".time");
+let africaTime = moment().tz("Africa/Johannesburg");
+
+africaDateElement.innerHTML = africaTime.format("MMMM Do, YYYY");
+africaTimeElement.innerHTML = africaTime.format(
+  "HH:mm:ss [<small>]A[</small>]"
+);
+}
+
+
 }
 let parisElement = document.querySelector("#paris");
 if (parisElement) {
